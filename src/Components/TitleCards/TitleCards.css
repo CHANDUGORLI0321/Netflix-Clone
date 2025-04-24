@@ -1,0 +1,119 @@
+/* .title-cards{
+    margin-top: 50px;
+    margin-bottom: 30px
+}
+.title-cards h2{
+    margin-bottom: 8px;
+}
+.card-list{
+    display: flex;
+    gap:10px;
+    overflow-x: scroll;
+}
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+.card-list img{
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card-list .card{
+    position: relative;
+}
+.card-list .card p{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+} */
+
+
+.title-cards {
+    margin: 50px 0;
+    width: 100vw; /* Full viewport width */
+    padding-left: 4%; /* Netflix-like edge padding */
+}
+
+.title-cards h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.card-list {
+    display: flex;
+    gap: 0.8vw; /* Responsive gap based on viewport */
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* padding-bottom: 20px; */
+    padding-right: 4%; /* Balances left padding */
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.card-list .card {
+    flex: 0 0 16vw; /* Responsive card width */
+    aspect-ratio: 16/9; /* Netflix-style aspect ratio */
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-list .card:hover {
+    transform: scale(1.05) translateY(-5px); /* Lift effect on hover */
+    z-index: 1; /* Bring hovered card forward */
+}
+
+.card-list img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-list .card p {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1vw;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+@media (max-width: 800px) {
+    .title-card{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .title-card h2{
+        font-size: 20px;
+    }
+    .card-list img{
+        width: 200px;
+    }
+    .card-list p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .title-card h2{
+        font-size: 15px;
+    }
+    .card-list img{
+        width: 165px;
+    }
+    .card-list p{
+        font-size: 10px;
+    }
+}
+   
