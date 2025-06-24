@@ -9,9 +9,13 @@ const Fotter = () => {
   return (
     <div className="footer">
       <div className="footer-icons">
+        <a href="https://www.youtube.com/" target='blank'>
           <img src={youtube_icon} alt="" />
+        </a>
           <img src={twitter_icon} alt="" />
+        <a href="https://www.instagram.com/" target='blank'>
           <img src={instagram_icon} alt="" />
+        </a>
           <img src={facebook_icon} alt="" />
       </div>
         <ul>
